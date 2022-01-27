@@ -42,7 +42,7 @@ class Listener implements ListenerInterface
     {
         if ($this->contains($event)) {
             $callback = $this->callback;
-            call_user_func($callback, $event);
+            $callback($event);
         }
     }
 }
